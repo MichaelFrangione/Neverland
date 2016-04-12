@@ -1,0 +1,236 @@
+// VARIABLES
+$white: #fff;
+$dark-blue: rgb(0, 46, 112);
+$light-blue: rgb(102, 179, 255);
+$orange: rgb(255, 119, 0);
+$black: #000;
+
+// FONTS
+
+@import url(https://fonts.googleapis.com/css?family=Bitter:400,700);
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+//GENERAL
+
+* {
+  box-sizing: border-box;
+}
+
+
+html, body {
+  height: 100%;
+  font-family: 'Raleway', sans-serif;
+}
+
+a, a:hover, a:focus, a:visited, a:active {
+  color:white;
+}
+
+h1, h2, h3 {
+  font-family: 'Bitter', serif;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 26px;
+}
+
+ul {
+  list-style: none;
+  padding:0;
+  margin:0;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 0px;
+}
+
+header {
+  background:$dark-blue;
+  height:38px;
+
+  ul {
+
+    li {
+      color:$white;
+      font-weight: bold;
+
+      a {
+        line-height: 38px;
+      }
+    }
+
+    li:last-child {
+      float:right;
+    }
+  }
+}
+
+.landing {
+  position: relative;
+  height: calc(100vh - 38px);
+  background: $light-blue;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow: hidden;
+  text-align: center;
+
+  .logo {
+    z-index: 100;
+    padding:25px;
+
+    img {
+      height:200px;
+    }
+
+    h2 {
+      margin-top:30px;
+      color:$white;
+    }
+  }
+}
+
+
+#home {
+
+  .services-list {
+    padding:0;
+  }
+
+  .page-title {
+    padding-top:40px;
+    padding-bottom:20px;
+    text-align: center;
+  }
+
+  .service-item {
+    text-align: center;
+    padding:0px;
+    margin-top:20px;
+
+    h1 {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap
+    }
+
+    .btn-container {
+      background: $light-blue;
+      min-height:120px;
+      padding:20px 0;
+      p {
+        color:$white;
+      }
+    }
+
+    img {
+      height:287px;
+      border:10px solid $orange;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+footer {
+  height:70px;
+  background: $black;
+  color:white;
+  text-align: center;
+
+  ul {
+    li {
+      margin: 20px 50px;
+    }
+  }
+}
+
+// TEST VIDEO STUFF
+video.bgvid {
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#about {
+  .about-landing {
+    position: relative;
+    height: 600px;
+    background: url("../images/rec-gym.jpg") #7446fe no-repeat center;
+    background-size:contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-align: center;
+
+    .logo {
+      position: absolute;
+      left: 0;
+      z-index: 100;
+      padding: 25px;
+
+      img {
+        height: 80px;
+      }
+    }
+
+    h1 {
+      width: 100%;
+      margin-top: 30px;
+      color: $white;
+    }
+    h2 {
+      width: 100%;
+      margin-top: 30px;
+      color: $white;
+    }
+  }
+  .about-content {
+    padding-top:50px;
+
+    h1,h2 {
+      text-align: center
+    }
+
+    h6 {
+      margin-bottom:20px;
+    }
+
+    .service-item {
+      padding-top:40px;
+    }
+
+    .register {
+      margin:50px auto;
+      text-align: center;
+
+      button {
+        width:30%;
+        height:50px;
+      }
+    }
+
+
+  }
+}
