@@ -1,42 +1,27 @@
 @import url(https://fonts.googleapis.com/css?family=Bitter:400,700);
 @import url(https://fonts.googleapis.com/css?family=Raleway);
-/* line 15, ../sass/app.scss */
 * {
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
-/* line 20, ../sass/app.scss */
 html, body {
   height: 100%;
-  font-family: 'Raleway', sans-serif;
-}
+  font-family: 'Raleway', sans-serif; }
 
-/* line 25, ../sass/app.scss */
 a, a:hover, a:focus, a:visited, a:active {
-  color: white;
-}
+  color: white; }
 
-/* line 29, ../sass/app.scss */
 h1, h2, h3 {
-  font-family: 'Bitter', serif;
-}
+  font-family: 'Bitter', serif; }
 
-/* line 33, ../sass/app.scss */
 h1 {
-  font-size: 36px;
-}
+  font-size: 36px; }
 
-/* line 37, ../sass/app.scss */
 h2 {
-  font-size: 32px;
-}
+  font-size: 32px; }
 
-/* line 41, ../sass/app.scss */
 h3 {
-  font-size: 26px;
-}
+  font-size: 26px; }
 
-/* line 45, ../sass/app.scss */
 ul {
   list-style: none;
   padding: 0;
@@ -45,30 +30,20 @@ ul {
   -webkit-margin-after: 0em;
   -webkit-margin-start: 0px;
   -webkit-margin-end: 0px;
-  -webkit-padding-start: 0px;
-}
+  -webkit-padding-start: 0px; }
 
-/* line 56, ../sass/app.scss */
 header {
   background: #002e70;
-  height: 38px;
-}
-/* line 62, ../sass/app.scss */
-header ul li {
-  color: white;
-  font-weight: bold;
-}
-/* line 66, ../sass/app.scss */
-header ul li a {
-  line-height: 38px;
-}
-/* line 71, ../sass/app.scss */
-header ul li:last-child {
-  float: right;
-}
+  height: 38px; }
+  header ul li {
+    color: #fff;
+    font-weight: bold; }
+    header ul li a {
+      line-height: 38px; }
+  header ul li:last-child {
+    float: right; }
 
-/* line 77, ../sass/app.scss */
-.landing {
+.home-landing {
   position: relative;
   height: calc(100vh - 38px);
   background: #66b3ff;
@@ -76,75 +51,49 @@ header ul li:last-child {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  text-align: center;
-}
-/* line 87, ../sass/app.scss */
-.landing .logo {
-  z-index: 100;
-  padding: 25px;
-}
-/* line 91, ../sass/app.scss */
-.landing .logo img {
-  height: 200px;
-}
-/* line 95, ../sass/app.scss */
-.landing .logo h2 {
-  margin-top: 30px;
-  color: white;
-}
+  text-align: center; }
+  .home-landing .logo {
+    z-index: 100;
+    padding: 25px; }
+    .home-landing .logo img {
+      height: 200px; }
+    .home-landing .logo h2 {
+      margin-top: 30px;
+      color: #fff; }
 
-/* line 105, ../sass/app.scss */
 #home .services-list {
-  padding: 0;
-}
-/* line 109, ../sass/app.scss */
+  padding: 0; }
 #home .page-title {
   padding-top: 40px;
   padding-bottom: 20px;
-  text-align: center;
-}
-/* line 115, ../sass/app.scss */
+  text-align: center; }
 #home .service-item {
   text-align: center;
   padding: 0px;
-  margin-top: 20px;
-}
-/* line 120, ../sass/app.scss */
-#home .service-item h1 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-}
-/* line 126, ../sass/app.scss */
-#home .service-item .btn-container {
-  background: #66b3ff;
-  min-height: 120px;
-  padding: 20px 0;
-}
-/* line 130, ../sass/app.scss */
-#home .service-item .btn-container p {
-  color: white;
-}
-/* line 135, ../sass/app.scss */
-#home .service-item img {
-  height: 287px;
-  border: 10px solid #ff7700;
-  margin-bottom: 20px;
-}
+  margin-top: 20px; }
+  #home .service-item h1 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap; }
+  #home .service-item .btn-container {
+    background: #66b3ff;
+    min-height: 120px;
+    padding: 20px 0; }
+    #home .service-item .btn-container p {
+      color: #fff; }
+  #home .service-item img {
+    height: 287px;
+    border: 10px solid #ff7700;
+    margin-bottom: 20px; }
 
-/* line 143, ../sass/app.scss */
 footer {
   height: 70px;
-  background: black;
+  background: #000;
   color: white;
-  text-align: center;
-}
-/* line 150, ../sass/app.scss */
-footer ul li {
-  margin: 20px 50px;
-}
+  text-align: center; }
+  footer ul li {
+    margin: 20px 50px; }
 
-/* line 157, ../sass/app.scss */
 video.bgvid {
   z-index: 2;
   position: absolute;
@@ -160,67 +109,94 @@ video.bgvid {
   transform: translateX(-50%) translateY(-50%);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-}
+  background-position: center; }
 
-/* line 176, ../sass/app.scss */
-#about .about-landing {
+.landing {
   position: relative;
   height: 600px;
-  background: url("../images/rec-gym.jpg") #7446fe no-repeat center;
-  background-size: contain;
+  background-size: contain !important;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  text-align: center;
-}
-/* line 187, ../sass/app.scss */
-#about .about-landing .logo {
-  position: absolute;
-  left: 0;
-  z-index: 100;
-  padding: 25px;
-}
-/* line 193, ../sass/app.scss */
-#about .about-landing .logo img {
-  height: 80px;
-}
-/* line 198, ../sass/app.scss */
-#about .about-landing h1 {
-  width: 100%;
-  margin-top: 30px;
-  color: white;
-}
-/* line 203, ../sass/app.scss */
-#about .about-landing h2 {
-  width: 100%;
-  margin-top: 30px;
-  color: white;
-}
-/* line 209, ../sass/app.scss */
-#about .about-content {
-  padding-top: 50px;
-}
-/* line 212, ../sass/app.scss */
-#about .about-content h1, #about .about-content h2 {
-  text-align: center;
-}
-/* line 216, ../sass/app.scss */
-#about .about-content h6 {
-  margin-bottom: 20px;
-}
-/* line 220, ../sass/app.scss */
-#about .about-content .service-item {
-  padding-top: 40px;
-}
-/* line 224, ../sass/app.scss */
-#about .about-content .register {
+  text-align: center; }
+  .landing .logo {
+    position: absolute;
+    left: 0;
+    z-index: 100;
+    padding: 25px; }
+    .landing .logo img {
+      height: 80px; }
+  .landing h1 {
+    width: 100%;
+    margin-top: 30px;
+    color: #fff; }
+  .landing h2 {
+    width: 100%;
+    margin-top: 30px;
+    color: #fff; }
+
+.landing.kinder-gym {
+  background: url("../images/kinder-gym.jpg") #ffff6b no-repeat center; }
+
+.landing.rec-gym {
+  background: url("../images/rec-gym.jpg") #7446fe no-repeat center; }
+
+.landing.competitive {
+  background: url("../images/competitive.jpg") #c6ffae no-repeat center; }
+
+.landing.circus-acts {
+  background: url("../images/circus.jpg") #ffff47 no-repeat center; }
+
+.landing.cheerleading {
+  background: url("../images/cheerleading.jpg") #57faff no-repeat center; }
+
+.landing.skateboarding {
+  background: url("../images/skateboarding.jpg") #19ff19 no-repeat center; }
+
+.landing.neverland-productions {
+  background: url("../images/ring.jpg") #ff4001 no-repeat center; }
+
+.landing.parties {
+  background: url("../images/parties.jpg") #feff37 no-repeat center; }
+
+.landing.rock-climbing {
+  background: url("../images/rock-climbing.jpg") #fe860c no-repeat center; }
+
+.contact-content,
+.service-content {
+  padding-top: 50px; }
+  .contact-content h1, .contact-content h2,
+  .service-content h1,
+  .service-content h2 {
+    text-align: center; }
+
+#services .service-content h6 {
+  margin-bottom: 20px; }
+#services .service-content .service-item {
+  padding-top: 40px; }
+#services .service-content .register {
   margin: 50px auto;
-  text-align: center;
-}
-/* line 228, ../sass/app.scss */
-#about .about-content .register button {
-  width: 30%;
-  height: 50px;
-}
+  text-align: center; }
+  #services .service-content .register button {
+    width: 30%;
+    height: 50px; }
+
+#contact .landing {
+  height: 450px; }
+#contact form {
+  max-width: 850px;
+  margin: 40px 0; }
+  #contact form .form-group {
+    overflow: hidden; }
+    #contact form .form-group label {
+      text-align: right;
+      line-height: 38px; }
+    #contact form .form-group select {
+      height: 38px; }
+    #contact form .form-group .submit-container {
+      text-align: right; }
+      #contact form .form-group .submit-container button {
+        width: 100%; }
+
+/*# sourceMappingURL=app.css.map */

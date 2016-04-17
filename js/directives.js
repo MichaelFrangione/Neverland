@@ -23,4 +23,16 @@
             }
         });
 
+    app.directive("landing",
+
+        function landing() {
+            return {
+                restrict: "E",
+                scope: {
+                    className: "@"
+                },
+                templateUrl: "html/directives/landing.html"
+            }
+        });
+
 })();

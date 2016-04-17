@@ -5,6 +5,18 @@ $light-blue: rgb(102, 179, 255);
 $orange: rgb(255, 119, 0);
 $black: #000;
 
+// Services
+$kinder-gym: #ffff6b;
+$rec-gym: #7446fe;
+$competitive: #c6ffae;
+$circus-acts: #ffff47;
+$cheerleading: #57faff;
+$skateboarding: #19ff19;
+$neverland-productions: #ff4001;
+$parties: #feff37;
+$rock-climbing: #fe860c;
+
+
 // FONTS
 
 @import url(https://fonts.googleapis.com/css?family=Bitter:400,700);
@@ -74,7 +86,7 @@ header {
   }
 }
 
-.landing {
+.home-landing {
   position: relative;
   height: calc(100vh - 38px);
   background: $light-blue;
@@ -172,46 +184,79 @@ video.bgvid {
   background-position: center;
 }
 
-#about {
-  .about-landing {
-    position: relative;
-    height: 600px;
-    background: url("../images/rec-gym.jpg") #7446fe no-repeat center;
-    background-size:contain;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    text-align: center;
 
-    .logo {
-      position: absolute;
-      left: 0;
-      z-index: 100;
-      padding: 25px;
+.landing {
+  position: relative;
+  height: 600px;
+  background-size:contain!important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  text-align: center;
 
-      img {
-        height: 80px;
-      }
-    }
+  .logo {
+    position: absolute;
+    left: 0;
+    z-index: 100;
+    padding: 25px;
 
-    h1 {
-      width: 100%;
-      margin-top: 30px;
-      color: $white;
-    }
-    h2 {
-      width: 100%;
-      margin-top: 30px;
-      color: $white;
+    img {
+      height: 80px;
     }
   }
-  .about-content {
-    padding-top:50px;
 
-    h1,h2 {
-      text-align: center
-    }
+  h1 {
+    width: 100%;
+    margin-top: 30px;
+    color: $white;
+  }
+  h2 {
+    width: 100%;
+    margin-top: 30px;
+    color: $white;
+  }
+}
+
+.landing.kinder-gym {
+  background: url("../images/kinder-gym.jpg") $kinder-gym no-repeat center;
+}
+.landing.rec-gym {
+  background: url("../images/rec-gym.jpg") $rec-gym no-repeat center;
+}
+.landing.competitive {
+  background: url("../images/competitive.jpg") $competitive no-repeat center;
+}
+.landing.circus-acts {
+  background: url("../images/circus.jpg") $circus-acts no-repeat center;
+}
+.landing.cheerleading {
+  background: url("../images/cheerleading.jpg") $cheerleading no-repeat center;
+}
+.landing.skateboarding {
+  background: url("../images/skateboarding.jpg") $skateboarding no-repeat center;
+}
+.landing.neverland-productions {
+  background: url("../images/ring.jpg") $neverland-productions no-repeat center;
+}
+.landing.parties {
+  background: url("../images/parties.jpg") $parties no-repeat center;
+}
+.landing.rock-climbing {
+  background: url("../images/rock-climbing.jpg") $rock-climbing no-repeat center;
+}
+
+.contact-content,
+.service-content {
+  padding-top: 50px;
+
+  h1, h2 {
+    text-align: center
+  }
+}
+
+#services {
+  .service-content {
 
     h6 {
       margin-bottom:20px;
@@ -231,6 +276,37 @@ video.bgvid {
       }
     }
 
+  }
+}
 
+#contact {
+
+  .landing {
+    height:450px;
+  }
+
+  form {
+    max-width: 850px;
+    margin: 40px 0;
+
+    .form-group {
+      overflow: hidden;
+
+      label {
+        text-align: right;
+        line-height: 38px;
+      }
+
+      select {
+        height: 38px;
+      }
+
+      .submit-container {
+        text-align: right;
+        button {
+          width: 100%;
+        }
+      }
+    }
   }
 }
