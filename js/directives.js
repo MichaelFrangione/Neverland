@@ -35,4 +35,13 @@
             }
         });
 
+    app.directive("latestNews",
+
+        function latestNews() {
+            return {
+                restrict: "E",
+                templateUrl: "html/directives/latest-news.html"
+            }
+        });
+
 })();
