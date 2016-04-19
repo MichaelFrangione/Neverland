@@ -81,17 +81,18 @@ header {
     padding: 20px 0; }
     #home .service-item .btn-container p {
       color: #fff; }
-  #home .service-item img {
+  #home .service-item .image-container img {
     height: 287px;
     border: 10px solid #ff7700;
     margin-bottom: 20px; }
 
 footer {
-  height: 70px;
   background: #000;
   color: white;
   text-align: center; }
   footer ul li {
+    margin: 20px 50px; }
+  footer ul.social-icons li {
     margin: 20px 50px; }
 
 video.bgvid {

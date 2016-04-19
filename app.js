@@ -10,7 +10,7 @@
 
     function config($stateProvider, $locationProvider, $urlRouterProvider) {
 
-        $locationProvider.html5Mode(true); // DISABLE WHEN RUNNING HTTP_SERVER
+        // $locationProvider.html5Mode(true); // DISABLE WHEN RUNNING HTTP_SERVER
 
         $stateProvider
             .state("home", {

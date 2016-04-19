@@ -144,16 +144,18 @@ header {
       }
     }
 
-    img {
-      height:287px;
-      border:10px solid $orange;
-      margin-bottom: 20px;
+    .image-container {
+      img {
+        height:287px;
+        border:10px solid $orange;
+        margin-bottom: 20px;
+      }
     }
   }
 }
 
 footer {
-  height:70px;
+  //height:70px;
   background: $black;
   color:white;
   text-align: center;
@@ -161,6 +163,12 @@ footer {
   ul {
     li {
       margin: 20px 50px;
+    }
+  }
+
+  ul.social-icons {
+    li{
+      margin: 0px 50px;
     }
   }
 }
