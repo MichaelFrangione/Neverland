@@ -6,11 +6,11 @@
         "ui.router"
     ])
     .config(["$stateProvider", "$locationProvider", "$urlRouterProvider", config])
-    .run(["$rootScope", "$state", "$window", "$location", run]);
+    .run(["$rootScope", "$window", "$location", run]);
 
     function config($stateProvider, $locationProvider, $urlRouterProvider) {
 
-        // $locationProvider.html5Mode(true); // DISABLE WHEN RUNNING HTTP_SERVER
+        $locationProvider.html5Mode(true); // DISABLE WHEN RUNNING HTTP_SERVER
 
         $stateProvider
             .state("home", {
@@ -116,7 +116,7 @@
         });
     };
 
-function run($rootScope) {
+function run($rootScope, $window,  $location) {
     console.log("site is ready.");
 
     $rootScope.$on('$stateChangeSuccess', function (event, toState) {
@@ -124,5 +124,11 @@ function run($rootScope) {
             // Scrolls the content back to top on each page change
             $("body").scrollTop("0px");
         }
+
+        $window.ga('send', {
+            hitType: "pageview",
+            location: $window.location.href,
+            page: $window.location.pathname
+        });
     });
 }
