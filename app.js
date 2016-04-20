@@ -15,6 +15,7 @@
         $stateProvider
             .state("home", {
                 url: "/home",
+                title: "Home",
                 templateUrl: "html/home.html"
             })
             .state("contact", {
@@ -118,7 +119,7 @@
 
 function run($rootScope, $window,  $location) {
     console.log("site is ready.");
-
+    
     $rootScope.$on('$stateChangeSuccess', function (event, toState) {
         if (toState.name != "home") {
             // Scrolls the content back to top on each page change
@@ -127,8 +128,8 @@ function run($rootScope, $window,  $location) {
 
         $window.ga('send', {
             hitType: "pageview",
-            location: $window.location.href,
-            page: $window.location.pathname
+            title: toState.title,
+            page: toState.url
         });
     });
 }
