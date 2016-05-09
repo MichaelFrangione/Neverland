@@ -23,6 +23,10 @@
                 templateUrl: "html/contact.html",
                 controller: 'contactCtrl'
             })
+            .state("about", {
+                url: "/about",
+                templateUrl: "html/about.html"
+            })
             .state("services", {
                 // url: "/services",
                 // controller: 'servicesCtrl',
