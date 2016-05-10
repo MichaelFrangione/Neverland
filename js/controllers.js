@@ -20,10 +20,10 @@
                 name: "Kinder Gym",
                 subItems: [
                     {
-                        name: "Parent n Tot (18 months - 2 ½ years)"
+                        name: "Parent n Tot (18mth - 2 1/2)"
                     },
                     {
-                        name: "Kinder (2-4 years)"
+                        name: "Kinder (2-4 yrs.)"
                     }
                 ]
             },
@@ -31,16 +31,34 @@
                 name: "Recreational Gymnastics",
                 subItems: [
                     {
-                        name: "Beginner Boys/Girls (4-7yrs / 7-10yrs)"
+                        name: "Beginner Girls (4-7yrs/7-10yrs)"
                     },
                     {
-                        name: "Beginner Development Program (8-13yrs)"
+                        name: "Beginner Boys (4-7yrs)"
                     },
                     {
-                        name: "Showcase Boys/Girls (5-8yrs/8-13yrs)"
+                        name: "Showcase Girls (5-8yrs/8-13yrs) & Boys (5-8/8-13yrs)"
+                    },
+                    {
+                        name: "Power Tumbling (7+ yrs)"
+                    },
+                    {
+                        name: "Trampoline (7+ yrs)"
+                    },
+                    {
+                        name: "Adult classes (13+ yrs)"
+                    },
+                    {
+                        name: "Boot camp"
                     },
                     {
                         name: "Tricking/Parkour"
+                    },
+                    {
+                        name: "School Groups"
+                    },
+                    {
+                        name: "After School Program"
                     }
                 ]
             },
@@ -48,16 +66,13 @@
                 name: "Competitive Gymnastics",
                 subItems: [
                     {
+                        name: "Beginner Development Program - Boys/Girls (8 -13yrs)"
+                    },
+                    {
                         name: "Inter club Boys/Girls"
                     },
                     {
-                        name: "Tricking/Parkour"
-                    },
-                    {
-                        name: "Power Tumbling (7+years)"
-                    },
-                    {
-                        name: "Acro Sport"
+                        name: "Provincial"
                     }
                 ]
             },
@@ -80,22 +95,29 @@
                         name: "Aerial Straps"
                     },
                     {
-                        name: "Tramp-Wall"
-                    },
-                    {
                         name: "Spanish Web"
                     },
                     {
                         name: "Pole Fitness"
                     },
                     {
-                        name: "Acro-Sport"
+                        name: "Tramp-Wall"
+                    },
+                    {
+                        name: "Acro Gymnastics"
                     }
                 ]
             },
             {
                 name: "Cheerleading",
-                subItems: []
+                subItems: [
+                    {
+                        name: "Cheerleading"
+                    },
+                    {
+                        name: "Dance"
+                    }
+                ]
             },
             {
                 name: "Skateboarding",
@@ -112,16 +134,13 @@
                         name: "Birthday Parties"
                     },
                     {
-                        name: "Corporate Parties"
-                    },
-                    {
                         name: "Bachelorette Parties"
                     },
                     {
                         name: "Workshops"
                     },
                     {
-                        name: "Boot Camp"
+                        name: "Corporate Parties"
                     }
                 ]
             },
