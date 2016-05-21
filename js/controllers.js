@@ -11,6 +11,7 @@
     angular.module("app").controller("servicesCtrl", ["$scope", "$stateParams", servicesCtrl]);
 
     function contactCtrl($scope) {
+        
         $scope.services = [
             {
                 name: "Select a program",

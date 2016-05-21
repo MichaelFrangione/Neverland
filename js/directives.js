@@ -44,4 +44,46 @@
             }
         });
 
+    app.directive("googleMap",
+
+        function googleMap() {
+            return {
+                restrict: "E",
+                templateUrl: "html/directives/google-map.html",
+                controller: function ($scope) {
+
+                    var mapDiv = document.getElementById('map');
+                    var latLong =  {
+                        lat: 43.731548,
+                        lng: -79.762418
+                    };
+
+                    var options = {
+                        center: latLong,
+                        zoom: 15,
+                        scrollwheel: false,
+                        navigationControl: false,
+                        mapTypeControl: false,
+                        scaleControl: false,
+                        draggable: false,
+                        mapTypeId: google.maps.MapTypeId.ROADMAP
+                    };
+
+                    var map = new google.maps.Map(mapDiv, options);
+
+                    var marker = new google.maps.Marker({
+                        position: latLong,
+                        map: map,
+                        // animation:google.maps.Animation.BOUNCE
+                    });
+
+                    var infoWindow = new google.maps.InfoWindow({
+                        content:"Neverland Arts and Entertainment"
+                    });
+
+                    infoWindow.open(map,marker);
+                }
+            }
+        });
+
 })();
