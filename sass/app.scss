@@ -88,7 +88,8 @@ header {
 
 .home-landing {
   position: relative;
-  height: calc(100vh - 38px);
+  //height: calc(100vh - 38px);
+  height:600px;
   background: $light-blue;
   display:flex;
   justify-content:center;
@@ -147,6 +148,7 @@ header {
     .image-container {
       img {
         height:287px;
+        min-width: 283px;
         border:10px solid $orange;
         margin-bottom: 20px;
       }
@@ -293,6 +295,18 @@ video.bgvid {
     height:450px;
   }
 
+  google-map {
+    height:100%;
+    width:100%;
+  }
+
+  #map {
+    width: 100%;
+    height: 100%;
+    background-color: #CCC;
+  }
+  .gm-style-iw + div {display: none;}
+
   form {
     max-width: 850px;
     margin: 40px 0;
@@ -315,6 +329,35 @@ video.bgvid {
           width: 100%;
         }
       }
+    }
+  }
+}
+
+#about {
+
+  .landing {
+    height: 450px;
+    background: $light-blue;
+  }
+
+  .about-content{
+    margin-bottom: 50px;
+
+    h1 {
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    .team-member {
+      h4{
+        min-height: 52px;
+        margin-bottom: 15px;
+      }
+      h3 {
+        margin-bottom: 10px;
+      }
+      p {}
     }
   }
 }
