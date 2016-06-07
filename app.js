@@ -10,7 +10,7 @@
 
     function config($stateProvider, $locationProvider, $urlRouterProvider) {
 
-        // $locationProvider.html5Mode(true); // DISABLE WHEN RUNNING HTTP_SERVER
+        $locationProvider.html5Mode(true); // DISABLE WHEN RUNNING HTTP_SERVER
 
         $stateProvider
             .state("home", {
@@ -26,6 +26,10 @@
             .state("about", {
                 url: "/about",
                 templateUrl: "html/about.html"
+            })
+            .state("privacy-policy", {
+                url: "privacy-policy",
+                templateUrl: "html/privacy-policy.html"
             })
             .state("services", {
                 // url: "/services",
@@ -123,7 +127,7 @@
 
 function run($rootScope, $window,  $location) {
     console.log("site is ready.");
-    
+
     $rootScope.$on('$stateChangeSuccess', function (event, toState) {
         if (toState.name != "home") {
             // Scrolls the content back to top on each page change
