@@ -4,6 +4,7 @@ $dark-blue: rgb(0, 46, 112);
 $light-blue: rgb(102, 179, 255);
 $orange: rgb(255, 119, 0);
 $black: #000;
+$dark-grey: #373a3c;
 
 // Services
 $kinder-gym: #ffff6b;
@@ -67,22 +68,22 @@ ul {
 
 header {
   background:$dark-blue;
-  height:38px;
+
+  .navbar-nav .nav-item {
+    min-width: 75px;
+  }
+
+  .dropdown-menu a {
+    color: $dark-grey;
+  }
 
   ul {
 
     li {
       color:$white;
       font-weight: bold;
-
-      a {
-        line-height: 38px;
-      }
     }
 
-    li:last-child {
-      float:right;
-    }
   }
 }
 

@@ -33,15 +33,14 @@ ul {
   -webkit-padding-start: 0px; }
 
 header {
-  background: #002e70;
-  height: 38px; }
+  background: #002e70; }
+  header .navbar-nav .nav-item {
+    min-width: 75px; }
+  header .dropdown-menu a {
+    color: #373a3c; }
   header ul li {
     color: #fff;
     font-weight: bold; }
-    header ul li a {
-      line-height: 38px; }
-  header ul li:last-child {
-    float: right; }
 
 .home-landing {
   position: relative;
