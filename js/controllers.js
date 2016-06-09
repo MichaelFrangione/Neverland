@@ -78,7 +78,7 @@
                 ]
             },
             {
-                name: "Circus Acts",
+                name: "Circus Arts",
                 subItems: [
                     {
                         name: "Aerial Silks"
