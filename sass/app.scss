@@ -5,6 +5,7 @@ $light-blue: rgb(102, 179, 255);
 $orange: rgb(255, 119, 0);
 $black: #000;
 $dark-grey: #373a3c;
+$latest-news: #d3ebdb;
 
 // Services
 $kinder-gym: #ffff6b;
@@ -162,6 +163,7 @@ footer {
   background: $black;
   color:white;
   text-align: center;
+  padding-bottom:20px;
 
   ul {
     li {
@@ -175,6 +177,7 @@ footer {
     }
   }
 }
+
 
 // TEST VIDEO STUFF
 video.bgvid {
@@ -360,5 +363,15 @@ video.bgvid {
       }
       p {}
     }
+  }
+}
+
+.news-container {
+  padding:40px;
+  background: $latest-news;
+  text-align: center;
+
+  h4 {
+    margin:0;
   }
 }

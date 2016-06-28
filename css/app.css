@@ -89,7 +89,8 @@ header {
 footer {
   background: #000;
   color: white;
-  text-align: center; }
+  text-align: center;
+  padding-bottom: 20px; }
   footer ul li {
     margin: 20px 50px; }
   footer ul.social-icons li {
@@ -223,5 +224,12 @@ video.bgvid {
     margin-bottom: 15px; }
   #about .about-content .team-member h3 {
     margin-bottom: 10px; }
+
+.news-container {
+  padding: 40px;
+  background: #d3ebdb;
+  text-align: center; }
+  .news-container h4 {
+    margin: 0; }
 
 /*# sourceMappingURL=app.css.map */
