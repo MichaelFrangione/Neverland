@@ -232,20 +232,27 @@ video.bgvid {
   .news-container h4 {
     margin: 0; }
 
+.parties .video-container,
 .neverland-productions .video-container {
   margin-top: 32px;
   position: relative;
   padding-bottom: 56.25%;
   padding-top: 30px;
   height: 0;
-  overflow: hidden; }
-  .neverland-productions .video-container iframe,
-  .neverland-productions .video-container object,
-  .neverland-productions .video-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; }
+  overflow: hidden;
+}
+.parties .video-container iframe,
+.parties .video-container object,
+.parties .video-container embed,
+.neverland-productions .video-container iframe,
+.neverland-productions .video-container object,
+.neverland-productions .video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 
 /*# sourceMappingURL=app.css.map */
