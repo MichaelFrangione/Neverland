@@ -1,0 +1,71 @@
+.landing {
+    position: relative;
+    width: 100%;
+    // background: $nvl-blue;
+    // background: url('../images/landing.jpg') no-repeat;
+    // display:flex;
+    // align-items: center;
+    // justify-content: center;
+    height: 100vh;
+    color: $nvl-white;
+    margin-bottom: 32px;
+
+
+    .background-img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(rgba(5,5,5,0.3), rgba(5,5,5,0.3)), url('../images/landing.jpg') no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        z-index: -1;
+    }
+
+    .content-container {
+        position: absolute;
+        width: 85%;
+        left: 15%;
+        right: 15%;
+        top: 50%;
+        margin-top: -150px;
+        height:100px;
+        opacity: 0;
+        animation: fade-in 0.5s 0.5s forwards;
+    
+        &.scrolled {
+            animation: none;
+        }
+    }
+    
+
+    .page-title {
+        z-index: 1;
+        text-align-last: left;
+        word-wrap: break-word;
+        // text-shadow: 1px 1px #000;
+        -webkit-margin-before: .25em;
+        margin-block-start: .25em;
+        -webkit-margin-after: .25em;
+        margin-block-end: .25em;
+    }
+
+    h2 {
+        z-index: 1;
+        font-size: 48px;
+        text-transform: uppercase;
+    }
+
+    h4 {
+        z-index: 1;
+        width: 85%;
+        font-size: 1.6em;
+        font-weight: 500;
+    }
+
+    @keyframes fade-in {
+        from { opacity: 0; margin-top:-125px }
+        to   { opacity: 1; }
+    }    
+
+}

@@ -1,0 +1,13 @@
+.footer-container {
+    height: 100px;    
+    background: $nvl-navy;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+    img {
+        width: 48px;
+        height: 48px;
+    }
+}

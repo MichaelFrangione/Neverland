@@ -1,0 +1,34 @@
+.button {
+    display: inline;
+    padding: 0.5em 3em;
+    border: 0.16em solid #FFFFFF;
+    margin: 0 0.3em 0.3em 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 18px;
+    color: #FFFFFF;
+    text-align: center;
+    transition: all 0.3s;
+    background: transparent;
+    cursor: pointer;
+}
+
+.button:hover {
+    color: #DDDDDD;
+    border-color: #DDDDDD;
+}
+
+.button:active {
+    color: #BBBBBB;
+    border-color: #BBBBBB;
+}
+
+
+@media all and (max-width:30em) {
+    .button {
+        display: block;
+        margin: 0.4em auto;
+    }
+}
