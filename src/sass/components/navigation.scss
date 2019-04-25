@@ -1,50 +1,145 @@
+$nav-background: rgba(204, 204, 204, 0.9);
+
 .navigation {
-    width: 100%;
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100px;
-    transition: all 0.3s;
-    top: 0;
-    opacity: 1;
-    z-index: 10000;
-    background: rgba(204, 204, 204, 0.3);
+	width: 100%;
+	position: fixed;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100px;
+	// transition: all 0.3s;
+	top: 0;
+	opacity: 1;
+	z-index: 10000;
+	transition: background 0.5s;
 
-    &.hidden {
-        top: -100px;
-        opacity: 0;
-    }
+	.nav-icon {
+		color: #fff;
+		font-size: 2em;
+		margin: 0 32px;
+		text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+		transition: color 0.3s;
+		cursor: pointer;
+		display: none;
+		border-radius: 50%;
+		padding: 6px;
+		background: transparent;
+		transition: all 0.5s;
 
-    a {
-        margin: 16px;
-        color: $nvl-white;
-        text-decoration: none;
-        font-size: 18px;
+		&:hover {
+			background: $nvl-dark-green;
+		}
+	}
 
-        &:hover {
-            color: $nvl-navy;
-            transition: color 0.3s;
-        }
-    }
+	.nav-items {
+		margin-right: 32px;
+	}
 
-    .nav-items{ margin-right: 32px; }
+	li {
+		margin: 16px;
+		text-decoration: none;
+		list-style: none;
 
-    .logo {
-        margin: 16px 32px;
-        width: 15vw;
-        min-width: 200px;
-        max-width: 250px;
-        transition: width 0.3ms;
-    }
+		a {
+			color: $nvl-white;
+			font-size: 1.2em;
+			cursor: pointer;
+			text-transform: capitalize;
+			text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+			transition: color .5s;
 
-    &.scrolled {
-        margin-top: -100px;
-    }
+			&:hover {
+				color: $nvl-navy;
+			}
+
+			&.active {
+				color: $nvl-navy;
+			}
+		}
+	}
+
+	.inline-nav {
+		li {
+			float: left;
+		}
+	}
+
+	.nav-dropdown {
+		position: absolute;
+		background: $nav-background;
+		width: 100%;
+		top: 60px;
+		height: auto;
+		text-align: center;
+		display: none;
+		margin-top: 0px;
+
+		li {
+			margin: 16px 0;
+			font-size: 1.2em;
+		}
+
+		.hr-text {
+			&:before {
+				background: linear-gradient(to right, transparent, #fff, transparent);
+			}
+		}
+	}
+
+	.logo {
+		margin-left: 32px;
+		margin-top: 10px;
+		height: 67px;
+		width: 200px;
+		transition: all 0.3ms;
+		background: url("../images/neverland-logo.svg") no-repeat;
+		background-size: cover;
+	}
+
+	&.scrolled {
+		background: $nav-background;
+	}
+
+	&.dropdown-open {
+		background: $nav-background;
+	}
+
+	&.force-bg {
+		background: $nav-background;
+	}
 }
 
-@media screen and (max-width: 480px) {
-    .navigation {
-        justify-content: center;
-    }    
+@media screen and (max-width: 1000px) {
+	.navigation {
+		li {
+			font-size: 0.9em;
+			margin: 5px;
+		}
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.navigation {
+		// justify-content: center;
+		height: 60px;
+
+		.logo {
+			background: url("../images/logo-small.png") no-repeat;
+			background-size: contain;
+			height: 50px;
+			width: 50px;
+		}
+
+		.inline-nav {
+			display: none;
+		}
+
+		.nav-dropdown {
+			display: block;
+		}
+
+		.nav-icon {
+			display: block;
+		}
+	}
 }

@@ -1,27 +1,21 @@
 import React, { Component } from 'react';
-import ScrollableAnchor from 'react-scrollable-anchor'
-import img from '../images/amanda-bio.jpg';
-import img2 from '../images/andre-bio.jpg';
-import AboutItem from './AboutItem';
-
+import { ContactActionContainer } from './ContactActionContainer';
+import AmandaBio from './bios/AmandaBio';
+import AndreBio from './bios/AndreBio';
 
 class AboutContainer extends Component {
-    render() { 
-        return (
-            <ScrollableAnchor id={'about'}>
-                <div className="about-screen-container">
-                    <div className="bg-fix"></div>             
-                    <hr className="hr-text section-header" data-content="Who We Are" />
-    
-                    {/* <h2 class="section-header">What We Do</h2> */}
-                    <section className="about-container">
-                        <AboutItem imgSrc={img} title="Amanda DellaPenta"/>
-                        <AboutItem imgSrc={img2} title="Andre Nurse"/>
-                    </section>
-                </div>
-            </ScrollableAnchor>
-        );
-    }
+	render() {
+		return (
+			<div className="about-screen-container" id="about">
+				<hr className="hr-text section-header" data-content="Who We Are" />
+				<section className="about-container">
+					<AmandaBio />
+					<AndreBio />
+				</section>
+				<ContactActionContainer />
+			</div>
+		);
+	}
 }
- 
+
 export default AboutContainer;

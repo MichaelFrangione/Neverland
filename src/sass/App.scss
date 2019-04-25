@@ -1,5 +1,6 @@
 @import 'variables';
 @import 'base';
+@import 'animations';
 @import 'components/landing';
 @import 'components/navigation';
 @import 'components/service-item';
@@ -9,3 +10,7 @@
 @import 'components/footer';
 @import 'components/button';
 @import 'components/bouncing-arrow';
+@import 'components/modal';
+@import 'components/productions';
+@import 'components/service-details';
+@import 'components/parallax-container';

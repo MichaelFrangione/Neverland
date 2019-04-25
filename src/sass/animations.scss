@@ -1,0 +1,152 @@
+$animateInTime: 700ms;
+$navEnterTime: 300ms;
+$animateInDelay: 700ms;
+$animateExitTime: 500ms;
+$popupTime: 300ms;
+
+body {
+	background: $nvl-grey;
+}
+.page {
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+
+/* enter transition 300ms, exit 150ms */
+.page.fade-appear,
+.page.fade-enter {
+	opacity: 0;
+	z-index: 1;
+}
+
+.page.fade-appear-active,
+.page.fade-enter.fade-enter-active {
+	opacity: 1;
+	transition: opacity $animateInTime linear $animateInDelay;
+}
+
+.page.fade-exit {
+	opacity: 1;
+}
+
+.page.fade-exit.fade-exit-active {
+	opacity: 0;
+	transition: opacity $animateExitTime linear;
+}
+
+.page.fade-appear .navigation,
+.page.fade-enter .navigation {
+	transform: translateY(-100px);
+	opacity: 0;
+}
+
+.page.fade-appear-active .navigation,
+.page.fade-enter.fade-enter-active .navigation {
+	transform: translateY(0);
+	opacity: 1;
+	transition: opacity $navEnterTime linear $animateInDelay, transform $navEnterTime ease-out $animateInDelay;
+}
+
+.page.fade-exit.fade-exit-active .navigation {
+	opacity: 0;
+	transform: translateY(-100px);
+	transition: opacity $navEnterTime linear $animateInDelay, transform $navEnterTime ease-in $animateInDelay;
+}
+
+@keyframes fade {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* VIDEO PLAYER FADE IN */
+.fade-enter {
+	opacity: 0.01;
+}
+
+.fade-enter.fade-enter-active {
+	opacity: 1;
+	transition: opacity 500ms ease-in;
+}
+
+.fade-exit {
+	opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+	opacity: 0.01;
+	transition: opacity 500ms ease-out;
+}
+
+/* POPUP MESSAGE ANIMATION */
+.popup-enter {
+	opacity: 0.01;
+}
+
+.popup-enter.popup-enter-active {
+	opacity: 1;
+	transition: opacity $popupTime ease-in;
+}
+
+.popup-exit {
+	opacity: 1;
+}
+
+.popup-exit.popup-exit-active {
+	opacity: 0.01;
+	transition: opacity $popupTime ease-out;
+}
+
+/* Nav animation */
+.nav-fade-enter {
+	opacity: 0.01;
+
+	li {
+		transform: translateX(-20px);
+		opacity: 0;
+	}
+
+	.hr-text {
+		opacity: 0;
+	}
+}
+
+.nav-fade-enter.nav-fade-enter-active {
+	opacity: 1;
+	transition: opacity 500ms;
+
+	@for $i from 1 through 5 {
+		li:nth-of-type(#{$i}) {
+			transform: translateX(0px);
+			opacity: 1;
+			transition: all 0.5s ease-out (0.5s + ($i - 1) * 0.15s);
+		}
+	}
+
+	.hr-text {
+		opacity: 0.5;
+		transition: all 0.5s ease-out;
+	}
+}
+
+.nav-fade-exit {
+	opacity: 1;
+
+	li {
+		transform: translateX(0px);
+		opacity: 1;
+	}
+
+	.hr-text {
+		opacity: 0.5;
+	}
+}
+
+.nav-fade-exit.nav-fade-exit-active {
+	opacity: 0.01;
+	transition: opacity 500ms;
+}

@@ -1,46 +1,70 @@
 import React, { Component } from 'react';
-import ScrollableAnchor from 'react-scrollable-anchor'
+import ScrollArrow from './ScrollArrow';
 
 class Landing extends Component {
-    componentDidMount() {
-        
-        window.addEventListener('scroll', (e) => {
-            let wScroll = window.scrollY;
-            let vHeight = document.documentElement.clientHeight;
-            
-            this.contentEl.classList.add('scrolled');
+	constructor(props) {
+		super(props);
+		this.onScroll = this.onScroll.bind(this);
+	}
 
-            if (this.contentEl) {
-                this.contentEl.style.transform = `translate(0px, ${wScroll / 2}%`;
-                this.contentEl.style.opacity = 1 - wScroll / (vHeight);
-            }
-            if (this.bgEl) {
-                this.bgEl.style.filter = `blur(${wScroll/300}px)`;
-            }
-        });
-    }
+	componentDidMount() {
+		window.addEventListener('scroll', this.onScroll);
+	}
 
-    render() { 
-        return (
-            <ScrollableAnchor id={'landing'}>
-                <div>
-                    <header className="landing" ref={n => this.landingEl = n}>
-                        <div className="background-img" ref={n => this.bgEl = n}/>
-                        <div className="content-container" ref={n => this.contentEl = n}>
-                            <h2 className="page-title">Are you looking for something fun and exciting?</h2>
-                            <h4>Neverland Arts &amp; Entertainment can help bring your vision to life and give your guests a performance they wont forget!</h4>
-                            <a href='#contact'>
-                                <button className="button">Book Now</button>
-                            </a>
-                        </div>
-                        <a href='#services'>
-                            <div className="arrow bounce" />
-                        </a>
-                    </header>
-                </div>
-            </ScrollableAnchor>
-        );
-    }
+	componentWillUnmount() {
+		window.removeEventListener('scroll', this.onScroll);
+	}
+
+	onScroll() {
+		if (window.innerWidth < 600) {
+			return;
+		}
+
+		function isInViewport(node) {
+			var rect = node.getBoundingClientRect();
+			return (
+				(rect.height > 0 || rect.width > 0) &&
+				rect.bottom >= 0 &&
+				rect.right >= 0 &&
+				rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+				rect.left <= (window.innerWidth || document.documentElement.clientWidth)
+			);
+		}
+		if (this.bgEl) {
+			let scrollTop = window.scrollY;
+			let initY = this.bgEl.offsetTop;
+			let height = this.bgEl.clientHeight;
+
+			this.contentEl.classList.add('scrolled');
+
+			let visible = isInViewport(this.bgEl);
+			if (visible) {
+				var diff = scrollTop - initY;
+				var ratio = Math.round(diff / height * 100);
+				this.bgEl.style.backgroundPositionY = `${parseInt(-(ratio * 1.5))}px`;
+				this.contentEl.style.transform = `translate(0px, ${scrollTop / 1.5}%`;
+				this.contentEl.style.opacity = 1 - scrollTop / height;
+			}
+		}
+	}
+
+	render() {
+		return (
+			<header id="landing" className="landing" ref={(n) => (this.landingEl = n)}>
+				<div className="background-img" ref={(n) => (this.bgEl = n)} />
+				<div className="content-container" ref={(n) => (this.contentEl = n)}>
+					<h2 className="page-title">Imagination Is the beginning of creation</h2>
+					{/* <a href="#contact">
+								<button className="button">Book Now</button>
+							</a> */}
+				</div>
+				{/* <a href="#services">
+							<div className="arrow bounce" />
+						</a> */}
+				<ScrollArrow scrollToEl={'home-details'} position="start" animate />
+			</header>
+		);
+	}
 }
- 
+
 export default Landing;

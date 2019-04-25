@@ -1,13 +1,42 @@
 .footer-container {
-    height: 100px;    
-    background: $nvl-navy;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    
-    img {
-        width: 48px;
-        height: 48px;
-    }
+	height: 100px;
+	background: $nvl-navy;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+
+	.content-wrapper {
+		padding: 0 32px;
+		color: #fff;
+		flex: 1;
+		font-size: 1.3em;
+	}
+
+	.link-wrapper {
+		flex: 1;
+		padding: 0 32px;
+		text-align: right;
+
+		img {
+			width: 48px;
+			margin: 0 5px;
+			height: 48px;
+		}
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.footer-container {
+		.content-wrapper {
+			font-size: 1em;
+		}
+
+		.link-wrapper {
+			img {
+				width: 30px;
+				height: 30px;
+			}
+		}
+	}
 }

@@ -1,0 +1,22 @@
+.parallax-container-img {
+	width: 100%;
+	height: 800px;
+	// background: linear-gradient(rgba(5,5,5,0.3), rgba(5,5,5,0.3)), url('../images/aerial-silks.jpg') no-repeat;
+	// background-size: cover;
+	// background-attachment: fixed;
+	z-index: -1;
+	// background-position-x: 40% !important;
+	// transition: all 0.3ms;
+
+	&.p-training {
+		background-position-x: 0 !important;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.parallax-container-img {
+		background-attachment: initial !important;
+		background-position: center !important;
+		height: 350px;
+	}
+}
