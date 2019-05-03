@@ -14,6 +14,7 @@ import Contact from './screens/Contact';
 
 import './sass/App.scss';
 import 'aos/dist/aos.css';
+import PrivacyPolicy from './screens/PrivacyPolicy';
 
 class App extends Component {
 	componentDidMount() {
@@ -39,6 +40,7 @@ class App extends Component {
 													<Route path="/events" component={Events} />
 													<Route path="/training" component={Training} />
 													<Route path="/contact" component={Contact} />
+													<Route path="/privacy-policy" component={PrivacyPolicy} />
 												</Switch>
 											)}
 										/>

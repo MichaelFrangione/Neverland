@@ -2,7 +2,9 @@
 	height: 100px;
 	background: $nvl-navy;
 	display: flex;
-	justify-content: space-between;
+	flex-wrap: wrap;
+
+	justify-content: center;
 	align-items: center;
 	position: relative;
 
@@ -10,7 +12,11 @@
 		padding: 0 32px;
 		color: #fff;
 		flex: 1;
-		font-size: 1.3em;
+		font-size: 1.2em;
+
+		.copy {
+			white-space: nowrap;
+		}
 	}
 
 	.link-wrapper {
@@ -24,12 +30,38 @@
 			height: 48px;
 		}
 	}
+
+	a {
+		white-space: nowrap;
+		color: $nvl-white;
+
+		&:hover {
+			color: $nvl-white;
+		}
+
+		&.active {
+			color: $nvl-white;
+		}
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.footer-container {
+		text-align: center;
+
+		.link-wrapper {
+			text-align: center;
+		}
+	}
 }
 
 @media screen and (max-width: 500px) {
 	.footer-container {
+		text-align: center;
+
 		.content-wrapper {
-			font-size: 1em;
+			font-size: 0.9em;
+			padding: 0;
 		}
 
 		.link-wrapper {

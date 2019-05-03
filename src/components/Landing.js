@@ -30,18 +30,18 @@ class Landing extends Component {
 				rect.left <= (window.innerWidth || document.documentElement.clientWidth)
 			);
 		}
-		if (this.bgEl) {
+		if (this.landingEl) {
 			let scrollTop = window.scrollY;
-			let initY = this.bgEl.offsetTop;
-			let height = this.bgEl.clientHeight;
+			let initY = this.landingEl.offsetTop;
+			let height = this.landingEl.clientHeight;
 
 			this.contentEl.classList.add('scrolled');
 
-			let visible = isInViewport(this.bgEl);
+			let visible = isInViewport(this.landingEl);
 			if (visible) {
 				var diff = scrollTop - initY;
 				var ratio = Math.round(diff / height * 100);
-				this.bgEl.style.backgroundPositionY = `${parseInt(-(ratio * 1.5))}px`;
+				this.landingEl.style.backgroundPositionY = `${parseInt(-(ratio * 1.5))}px`;
 				this.contentEl.style.transform = `translate(0px, ${scrollTop / 1.5}%`;
 				this.contentEl.style.opacity = 1 - scrollTop / height;
 			}
@@ -51,16 +51,9 @@ class Landing extends Component {
 	render() {
 		return (
 			<header id="landing" className="landing" ref={(n) => (this.landingEl = n)}>
-				<div className="background-img" ref={(n) => (this.bgEl = n)} />
 				<div className="content-container" ref={(n) => (this.contentEl = n)}>
 					<h2 className="page-title">Imagination Is the beginning of creation</h2>
-					{/* <a href="#contact">
-								<button className="button">Book Now</button>
-							</a> */}
 				</div>
-				{/* <a href="#services">
-							<div className="arrow bounce" />
-						</a> */}
 				<ScrollArrow scrollToEl={'home-details'} position="start" animate />
 			</header>
 		);
