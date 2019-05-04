@@ -52,6 +52,15 @@
 				}
 			}
 
+			p {
+				font-size: 1em;
+			}
+
+			a {
+				color: $nvl-darkblue;
+				font-size: 1em;
+			}
+
 			.contact-img {
 				width: 100%;
 				// max-width: 550px;
@@ -100,6 +109,15 @@
 					padding: 10px;
 					color: #fff;
 				}
+			}
+
+			.quote {
+				text-align: center;
+				color: $nvl-dark-green;
+				font-size: 1.4em;
+				font-style: italic;
+				text-transform: uppercase;
+				font-family: 'Merriweather', serif !important;
 			}
 		}
 

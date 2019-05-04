@@ -27,14 +27,20 @@ class Contact extends Component {
 								</li>
 								<li>
 									<i className="material-icons">email</i>
-									<span>info@neverlandartsent.com</span>
+									<a href="mailto:info@neverlandartsent.com">
+										<span>info@neverlandartsent.com</span>
+									</a>
 								</li>
 							</ul>
 							<h3>Training Address</h3>
 							<p>
 								Gymnastic Giants <br /> 175 Sun Pac blvd. <br /> Brampton, ON <br /> L6S 5Z6
 							</p>
-
+							<h3>Looking to perform in the GTA?</h3>
+							<p>
+								Send your demos and resume to{' '}
+								<a href="mailto:submission@neverlandartsent.com">submission@neverlandartsent.com</a>
+							</p>
 							<img className="contact-img" src={contactImg} alt="The Neverland Team" />
 						</div>
 					</Grid>
@@ -46,6 +52,7 @@ class Contact extends Component {
 								you within 24 hours
 							</p>
 							<ContactForm />
+							<div className="quote">"Create with the heart; build with the mind." - Criss Jami</div>
 						</div>
 					</Grid>
 				</Grid>

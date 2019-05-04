@@ -11,6 +11,7 @@ import trainingImg from '../images/open-gym.jpg';
 import ProductionsContent from '../components/content/ProductionsContent';
 import EventsContent from '../components/content/EventsContent';
 import TrainingContent from '../components/content/TrainingContent';
+import SideNav from '../components/SideNav';
 
 class Home extends Component {
 	state = {};
@@ -18,6 +19,7 @@ class Home extends Component {
 		return (
 			<div className="page">
 				<Navigation showNavItems={true} />
+				<SideNav />
 				<Landing />
 				<ContentContainer title="Neverland Arts &amp; Entertainment" id="home-details" />
 				<ParallaxContainer image={productionsImg} name="p-productions" />
