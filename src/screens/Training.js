@@ -167,11 +167,11 @@ class Training extends Component {
 									</tr>
 									<tr>
 										<td>Saturday</td>
-										<td>7:30 - 10:30pm</td>
+										<td>7:30pm - 10:30pm</td>
 									</tr>
 									<tr>
 										<td>Sunday</td>
-										<td>7:30 - 10:30pm</td>
+										<td>7:30pm - 10:30pm</td>
 									</tr>
 								</tbody>
 							</table>
@@ -183,11 +183,11 @@ class Training extends Component {
 							<tbody>
 								<tr>
 									<td>Tuesday</td>
-									<td>8:00 - 9:00pm</td>
+									<td>8:00pm - 9:00pm</td>
 								</tr>
 								<tr>
 									<td>Saturday</td>
-									<td>2:00 - 3:00pm</td>
+									<td>2:00pm - 3:00pm</td>
 								</tr>
 							</tbody>
 						</table>
@@ -200,8 +200,30 @@ class Training extends Component {
 							</tbody>
 						</table>
 					</Grid>
-					<Grid item xs={12} data-aos="fade">
-						<h3>Price</h3>
+					<Grid item xs={12} sm={6} data-aos="fade">
+						<div className="pricing">
+							<h3>Summer Session (July and August)</h3>
+							<h4>Beginner Aerial Silks classes</h4>
+							<table className="pricing-table">
+								<tbody>
+									<tr>
+										<td>Tuesday</td>
+										<td>8:00pm - 9:00pm</td>
+									</tr>
+									<tr>
+										<td>Friday</td>
+										<td>7:00pm - 8:00pm</td>
+									</tr>
+									<tr>
+										<td>Saturday</td>
+										<td>2:00pm - 3:00pm</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</Grid>
+					<Grid item xs={12} sm={6} data-aos="fade">
+						<h3>Price (Subject to HST)</h3>
 						<table className="pricing-table">
 							<tbody>
 								<tr>
@@ -215,10 +237,9 @@ class Training extends Component {
 							</tbody>
 						</table>
 						<p>
-							<strong>Location: Gymnastic Giants - 175 Sun Pac blvd. L6S 5Z6, Brampton, ON</strong>
-						</p>
-						<p>
-							<strong>Pricing (All prices subject to HST)</strong>
+							<strong>
+								Location: Gymnastic Giants - 175 Sun Pac blvd. <br /> L6S 5Z6, Brampton, ON
+							</strong>
 						</p>
 					</Grid>
 				</Grid>
